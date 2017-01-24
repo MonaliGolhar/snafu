@@ -6,439 +6,518 @@ and open the template in the editor.
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="Basecss.css">
- <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-    <script>
-        /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<script>
+/*
+* To change this template, choose Tools | Templates
+* and open the template in the editor.
+*/
 $(document).ready(function() {
-		  $('.nav-toggle1').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+$('.nav-toggle1').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Engineering is the right choice for you if..');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Engineering is the right choice for you if..');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle2').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Other options than Engineering');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Other options than Engineering');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle3').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Myths about Engineering');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Myths about Engineering');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle4').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Important entrance exams for Engineering');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Important entrance exams for Engineering');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle5').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('All branches of Engineering');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('All branches of Engineering');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle6').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('How to choose a good Engineering college');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('How to choose a good Engineering college');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle7').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')==='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Top colleges of Engineering in India');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Top colleges of Engineering in India');
+}
+});
+});
+});
+</script>
+<style>
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1e1e61;
+}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Engineering is the right choice for you if..');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Engineering is the right choice for you if..');
-			  }
-                          
-			});
-		  });
+ul.topnav li {float: left;}
 
-		});
-                
-                $(document).ready(function() {
-		  $('.nav-toggle2').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Other options than Engineering');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Other options than Engineering');
-			  }
-                          
-			});
-		  });
+ul.topnav li a:hover {background-color: #555;}
 
-		});
-                
-                
-                $(document).ready(function() {
-		  $('.nav-toggle3').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+ul.topnav li.icon {display: none;}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Myths about Engineering');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Myths about Engineering');
-			  }
-                          
-			});
-		  });
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
 
-		});
-                
-                $(document).ready(function() {
-		  $('.nav-toggle4').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
-
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Important entrance exams for Engineering');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Important entrance exams for Engineering');
-			  }
-                          
-			});
-		  });
-
-		});
-                $(document).ready(function() {
-		  $('.nav-toggle5').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
-
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('All branches of Engineering');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('All branches of Engineering');
-			  }
-                          
-			});
-		  });
-
-		});
-                $(document).ready(function() {
-		  $('.nav-toggle6').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
-
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('How to choose a good Engineering college');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('How to choose a good Engineering college');
-			  }
-                          
-			});
-		  });
-
-		});
-                
-                     $(document).ready(function() {
-		  $('.nav-toggle7').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
-
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Top colleges of Engineering in India');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Top colleges of Engineering in India');
-			  }
-                          
-			});
-		  });
-
-		});
-    </script>    
-
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style >
 </head>
 <body>
 <div class="header col-11-1 contentdiv w3-blue-grey" >
-    <center> <h1><b>SNNAFU</b></h1>
-        Its everything about engineering....</center>
+<center> <h1><b>SNAAFU</b></h1>
+Everything about engineering under a single umbrella....</center>
 </div>
-
-
 <div class="row">
+<div class="col-11-1">
+<ul class="topnav" id="myTopnav">
+  <li><a href="index.html">What's New</a></li>
+  <li><a href="PreEngineers.html">PreEngineers</a>
+</li>
+  <li><a href="letsbegin.html">Let's Begin</a></li>
+  <li><a href="Internship_project.html"> Projects and Internships</a></li>
+  
+  <li><a href="HigherEdu_CompetitiveExams.html">Higher Education and competitive exams</a></li>
+  <li><a href="Placements.html"> Placements</a>
+</li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#9776</a>
+  </li>
+</ul>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adSn -->
 
-<div class="col-2-1 ">
-
-    <a href="index.html"> <div class="menu contentdiv w3-purple">What's New</div></a>
-    <a href="PreEngineers.html"><div class="menu contentdiv w3-deep-purple">PreEngineers</div></a>
-    <a href="letsbegin.html"><div class="menu contentdiv w3-indigo">Let's Begin</div></a>
-    <a href="Internship_project.html"> <div class="menu contentdiv w3-blue">Projects and Internships</div></a>
-    <a href="HigherEdu_CompetitiveExams.html"> <div class="menu contentdiv w3-teal">Higher Education and competitive exams</div></a>
-    <a href="Placements.html"> <div class="menu contentdiv w3-green">Placements</div></a>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4184205207267366"
+     data-ad-slot="8540143932"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
-
- <p><button id="btn1" href="#collapse1" class="w3-btn w3-round-xxlarge nav-toggle1 col-9-0 w3-indigo contentdiv">Engineering is the right choice for you if..</button></p>
-
-<div id="collapse1" class="contentdiv col-9 " style="display:none">
-    <ul>
-        <li> You like mathematics and you are good at it. Consider little higher level mathematics. Don't judge yorself on your 10th score.
-
-        <li> you are good at science. Specially physics.
-
-        <li> you like problem solving.
-
-        <li> you think out of box.
-
-        <li> you like to take challenges.
-
-        <li> you are curious about how the things work.
-
-        <li> you want to help people to improve their lives by solving their day to day problems technically.
-
-        <li> you like to work in teams.
-
-        <li> you really want to be an engineer.
-    </ul>
+<p><button id="btn1" href="#collapse1" class="w3-btn w3-round-xxlarge nav-toggle1 col-11-1 w3-indigo contentdiv">Engineering is the right choice for you if....</button></p>
+<div id="collapse1" class="contentdiv col-11-1 " style="display:none">
+<ul>
+<li>
+You have a logical bend of mind. What I mean by that is, you belive that logic is the only way to solve any problem (For ex. X is because of Y. Not because my dad said so).
+<li> You like mathematics and you are good at it (or at least wish to become good at it). Consider little higher level mathematics (differentiation, Integration, etc) . Don't judge yourself on your 10th score (We know how we got it, don't we?).
+<li> you are good at science. Especially Physics. While it may not be applicable to all the branches, but most of the core branches are nothing but applications of Physics.
+<li> you like to solve problems. And a lot of them. Not only real life problems, but also those based on the formulae.
+<li> you think out of box (This is applicable if you want to be a "good" engineer. And trust me, being an average engineer is no fun).
+<li> you like to take challenges.
+<li> you are curious about how the things work.
+<li> You wish to exploit technology to solve most of the problems in your (or others) life.
+<li> you like to work in teams (This is true for other streams too. Having said that, it's much more important for engineering).
+<li> you really want to be an engineer (Yes. This is the most important point. Don't be an engineer cause everybody is being one or your mom/dad/anybody want's you to be an engineer. It should come from your heart or you will regret it later).
+</ul>
 </div>
-
-        <p><button id="btn2" href="#collapse2" class="w3-btn w3-round-xxlarge nav-toggle2 col-9-0 w3-indigo contentdiv">Other options than Engineering</button></p>
-
-    <div id="collapse2" class="contentdiv col-9" style="display:none">
-        <ul>
-            <li> Higher education in science and maths provides you good opportunities in research and teaching field.
-
-            <li> Career in hotel and hospitality management.
-
-            <li> Marine science and oceonology. Opportunities for aspirants.
-
-            <li> Research: Institutes like IISER provides great research opportunities.
-
-            <li> Defence research: DRDO.
-
-            <li> Opportunities in civil services: preparing for the exams like UPSC.
-
-            <li> Banking Exams.
-
-            <li> BBA/MBA: to have your own business.
-            <li> Fashion.
-
-            <li> Agriculture.
-
-            <li> Defence.
-
-            <li> Law.
-
-            <li> CA(Chartered Accountant).
-
-            <li> Journalism.
-                <br>
-and many more..
-        </ul>
-    </div>
-    
-           <p><button id="btn3" href="#collapse3" class="w3-btn w3-round-xxlarge nav-toggle3 col-9-0 w3-indigo contentdiv">Myths about Engineering</button></p>
-
-      <div id="collapse3" class="col-9 contentdiv" style="display:none">
-          <ul>
-              <li> An engineer can repair any electrical device.
-
-              <li> They know how to build robots, satellites, cars etc.
-
-              <li> If you are software engineer you are a good hacker.
-
-              <li> You need to study a lot for engineering.
-
-              <li> Engineering is better than plain sciences. 
-          </ul>
-      </div>
-    
-              <p><button id="btn4" href="#collapse4" class="w3-btn w3-round-xxlarge nav-toggle4 col-9-0 w3-indigo contentdiv">Important entrance exams for Engineering</button></p>
-
-     <div id="collapse4" class="col-9 contentdiv" style="display:none">
-         <ul>
-             <li> JEE Main(Joint Entrance Examination Main)
-
-             <li>JEE Advanced
-
-             <li>AIEEE(All India Engineering Entrance Examination)
-
-             <li>BITSAT(Birla Institute of Technology and Science Admission Test)
-
-             <li>ENAT(EPSI National Admission Test)
-
-             <li>VITEEE(Vellore Institute of Technology Engineering Entrance Exam)
-
-             <li>NAT(National Apptitude Test)
-
-             <li>NATA(National Aptitude Test in Architecture)
-         </ul>
-     </div>
-    
-              
-     <p><button id="btn5" href="#collapse5" class="w3-btn w3-round-xxlarge nav-toggle5 col-9-0 w3-indigo contentdiv">All branches of Engineering</button></p>
-
- <div id="collapse5" class="col-9 contentdiv" style="display:none">
-     <ul>
-         <li>Automobile Engineering
-
+<p><button id="btn2" href="#collapse2" class="w3-btn w3-round-xxlarge nav-toggle2 col-11-1 w3-indigo contentdiv">If not engineering then what?</button></p>
+<div id="collapse2" class="contentdiv col-11-1" style="display:none">
+<ul>
+<li> <b>B.Sc.</b>
+<p>
+Don't underestimate this course. A B.Sc. degree followed by a M.Sc. can open up multiple opportunities in research. A B Sc offers you a very promising career and the best part about this is: It takes just 3 years.
+</p>
+</li>
+<li><b>BBA</b>
+<p>
+It stands for Bachelor in Business Administration. It is below the level of MBA. This 3 years course from a good college can land you in a good company. Also an MBA followed by a BBA will be a great boost to your career.
+You can also do a <B>BBA+MBA dual degree</B>. This will save you the efforts of preparing for MBA entrance tests.
+</p>
+</li>
+<li><b>BHM</b>
+<p>
+It stands for Bachelor in Hotel Management. This 4 year degree is highly job oriented. A BHM from a good college will ensure you a respectable role in Hospitality (Hotel and Travel) industry. While the diploma version of this course is also available, but a degree ensures a complete competence in this field.
+</p>
+</li>
+<li> <b>Marine science and oceanology</b>
+<p>
+There are multiple courses in this field. They can open your doors for a stellar and proud career in merchant navy.
+</p>
+<li> <b>Research </b>: Institutes like IISER, IUCAA and DRDO provide great research opportunities.
+<li> <b>Fashion and Design related courses</b>
+Fashion never goes out of fashion. A few courses in this sector:
+<ul>
+<li> Bachelor in Fashion Design and Technology
+<li> Bachelor in Fashion Communications
+<li> Bachelor in Product Design
+<li> Bachelor in Interior Designing
+<li> Bachelor in Design (Leather/Accessory)
+</ul>
+And many more.....
+</li>
+<li> You can also consider following options too:
+<ul>
+<li> Agriculture.
+<li> Law.
+<li> Journalism.
+<li> Pharmacy
+</ul>
+</ul>
+</div>
+<p><button id="btn3" href="#collapse3" class="w3-btn w3-round-xxlarge nav-toggle3 col-11-1 w3-indigo contentdiv">Myths about Engineering</button></p>
+<div id="collapse3" class="col-11-1 contentdiv" style="display:none">
+<p>
+If you want to be an engineer for the following reasons, then you better think about your decision again. Cause these myths are not true my dear friend.
+</p>
+<ul>
+<li><b>An engineer definitely gets a placement and most of the engineers earn in lac's.</b>
+<p>
+This is the biggest myth and it is completely false. If you are pursuing engineering just for the sake of a great job, you need to know a few facts.
+<br>
+Placement depends upon multiple factors: college, branch, market conditions, requirements and your profile.</p>
+<ul>
+<li> While most of the students in IITs manage to get a good placement, same is not true about other colleges. Student's from tier-II and tier-III colleges struggle to get a job.
+<li> Placement heavily depends upon your branch. Comp/IT students do get good placements, but conditions are not so good for core branches. Students from such branches often get a job in a software company only, which pays peanuts. Hardly any student gets a job in R&D sector.
+<li> If the market is suffering from a recession, you might find yourself in a trouble.
+<li> A company may not have requirements each and every year. And even if they have some, they first prefer top colleges (read IITs).
+<li> And finally, your profile matters a lot. Especially your grades and communication skills.
+</ul>
+</li>
+<li> <b>An engineer can repair any electrical/mechanical device.</b>
+<p>
+Definitely false.<br>
+Most of the colleges don't provide much of a practical exposure. While engineer learns about electrical/mechanical devices, most of the community can't repair one. Only those who study on their own (and wreck 1 or 2 gadgets in the process)
+may repair a few (but not all) equipments.
+</p>
+<li> <b>They know how to build robots, satellites, cars etc.</b>
+<p>
+Nah. Most of us don't. <br>
+While a few students from very good colleges are involved in designing satellites, other colleges neither enough resources (read funds) nor do they care.
+But most of the colleges have a Robocon and a SUPRA team, but only a few students (20-30 out of 400-500) are a part of these teams. And the robots and cars we make are not like the ones shown in
+sci-fi movies or our college brochures. They are very simple and crude.
+</p>
+<li> <b>If you are software engineer you are a good hacker.</b>
+<p>
+Not true at all. Hacking is whole lot of different sector and you don't need to be a software engineer to learn hacking (Hacking is illegal, bdw).
+Let alone hacking, most of the software engineers are not even good coders.
+</p>
+<li> <b>You need to study a lot for engineering.</b>
+<p>
+You <b>don't</b> need to, but you <b>should</b>.
+<br>
+While I truly believe that grades don't matter a lot, but most of the world works otherwise. You will know the importance of grades when you will apply to a job or for higher education.
+</p>
+<li><b> Engineering is better than plain sciences.</b>
+<p>
+Science and Engineering are completely different courses and both have their advantages and disadvantages. It's an individual choice.
+</p>
+</ul>
+<p>
+I don't want to discourage you, but every student must be aware of these facts before choosing most the stream he wants to study in. Having said all these things, I still think that engineering is the best thing that happened to me. It teaches you so many things, both technical and non-technical, that you can face almost any problem.
+</p>
+</div>
+<p><button id="btn4" href="#collapse4" class="w3-btn w3-round-xxlarge nav-toggle4 col-11-1 w3-indigo contentdiv">Important entrance exams for Engineering</button></p>
+<div id="collapse4" class="col-11-1 contentdiv" style="display:none">
+<ul>
+<li> JEE Main(Joint Entrance Examination Main)
+<li>JEE Advanced
+<li>AIEEE(All India Engineering Entrance Examination)
+<li>BITSAT(Birla Institute of Technology and Science Admission Test)
+<li>CET of every state (for ex. MHTCET of Maharashtra)
+<li>ENAT(EPSI National Admission Test)
+<li>VITEEE(Vellore Institute of Technology Engineering Entrance Exam)
+<li>NAT(National Apptitude Test)
+<li>NATA(National Aptitude Test in Architecture)
+</ul>
+</div>
+<p><button id="btn5" href="#collapse5" class="w3-btn w3-round-xxlarge nav-toggle5 col-11-1 w3-indigo contentdiv">All branches of Engineering</button></p>
+<div id="collapse5" class="col-11-1 contentdiv" style="display:none">
+<p>
+While most of us are aware about only basic forms of engineering, there are a plethora of other branches as well. You should choose your branch very wisely, at it decides your career.
+</p>
+<ul>
+<li>Automobile Engineering
 <li>Applied Electronics and Instrumentation Engineering
-
 <li>Agricultural Engineering
-
 <li>Aeronautical Engineering
-
 <li>Bio Technology
-
 <li>Biochemical Engineering
-
 <li>Civil Engineering
-
 <li>Chemical and Alcohol Technology
-
 <li>Computer Science Engineering
-
 <li>Chemical Engineering
-
-<li>Electronics & Instrumentation 
-
+<li>Electronics & Instrumentation
 <li>Engineering
-
-<li>Electronics & Telecomm Engineering
-
+<li>Electronics & Telecommunications Engineering
 <li>Electronics Engineering
-
 <li>Electronics Instrumentation & Control
-
 <li>Electrical & Electronics Engineering
-
 <li>Electrical Engineering
-
 <li>Electronics & Communication Engineering
-
 <li>Environmental Engineering
-
 <li>Industrial Production Engineering
-
 <li>Instrumentation & Control
-
 <li>Food Technology
-
 <li>Industrial Engineering
-
 <li>Instrumentation Engineering
-
 <li>Information Technology
-
 <li>Leather Technology
-
 <li>Marine Engineering
-
 <li>Material Science
-
 <li>Mechanical & Industrial Engineering
-
 <li>Mechanical Engineering
-
-<li>Man Made Fibre Technology
-
+<li>Man Made Fiber Technology
 <li>Manufacturing Technology
-
 <li>Oil Technology
-
 <li>Metallurgical Engineering
-
 <li>Production Engineering
-
 <li>Plastic Technology
-
 <li>Textile Engineering
-
 <li>Textile Technology
-
 <li>Production & Industrial Engineering
-     </ul>
- </div>      
-     
-     
-     
-        <p><button id="btn6" href="#collapse6" class="w3-btn w3-round-xxlarge nav-toggle6 col-9-0 w3-indigo contentdiv">How to choose a good Engineering college</button></p>
+</ul>
+</div>
+<p><button id="btn6" href="#collapse6" class="w3-btn w3-round-xxlarge nav-toggle6 col-11-1 w3-indigo contentdiv">How to choose a good Engineering college</button></p>
+<div id="collapse6" class="col-11-1 contentdiv" style="display:none">
+<p>
+While deciding your career as an engineer is hard enough a choice to make, but as you have already cleared that hurdle, let's focus on the second toughest choice: <b>Which college should I choose?</b><br>
+It's really very tough to answer this question and again, it is very subjective. You may join college for it's reputation, while I might consider it's ROI. But there are a few essential factors which you should consider before zeroing in on your college.
+</p>
+<ul>
+<li> <b> Infrastructure: </b><br>
+<p>This is the most important factor while choosing a college. Infrastructure of a college means it's labs, computer labs, workshops, sufficient classrooms, a good auditorium, good eating spaces including at least a decent canteen (you don't find a great canteen in any engineering college),
+enough parking, sufficient open spaces and a ground, if possible. You should also look into availability of lab equipments, computers, lathe machines, etc. And the best source to know about all these things is: of course, current student's of that college.
+</p>
+<li><b>Faculty:</b>
+<p>
+Faculty should be well experienced, sufficiently qualified , concerned about students understanding and updated with recent the development's in their respective fields. You can check their qualifications on the college's site. Again, the best way is to ask the students and alumni.
+</p>
+<li> <b>Placements:</b><br>
+<p>Let's be honest, most of us are more worried about our future company rather than what we may learn in our college days. And if you are one of those people, then you should definitely look into the placement report of the college you want to join.
+Gather the information about which companies visit the college for placements, not only annual placements, but for internship's as well. Know about the quality of companies, the sector in which they offer the placement, compensation provided by them, etc. Knowing average salary is not enough. You have to do a thorough analysis of the placement procedure.
+</p>
+<li><b>Location and facilities:</b>
+<p>Location of the college should be convenient for you because it directly affects your daily lifestyle. While a picturesque location is not expected, but it should be
+at least easily accessible from the nearby city, bus stop/railway station, a good market and of course, from where you are going to stay. Generally a college in a good city attracts good crowd, which means better people to interact with and a better growth of your personality.<br>
+Facilities like hostel, Wi-Fi, library, mess should be available as per your requirement. What I mean by this is, if you are a bibliophile, you should look for a good library.
+</p>
+<li><b>Alumni network: </b>
+<p>
+The best way to judge a machine is by examining it's output. Similarly, the best way to judge a college is by analyzing it's alumni's career progression. These four years are going to be very important for you.
+You are not going to join a college, you are going to be a part of a culture. So, it's better to understand that culture beforehand.<br>
+Use Linked In and Facebook to track their alumni, ask them how the college and the culture is, meet them if possible. Ask them about their college festivals, faculties, extracurricular's. Don't leave any stone unturned.
+</p>
+</ul>
+</div>
+<p><button id="btn7" href="#collapse7" class="w3-btn w3-round-xxlarge nav-toggle7 col-11-1 w3-indigo contentdiv">Top colleges of Engineering in India</button></p>
+<div id="collapse7" class="col-11-1 contentdiv" style="display:none" float="right">
+<ul>
+<li>Indian Institute of Technology, Madras
+<li>Indian Institute of Technology, Bombay
+<li>Indian Institute of Technology, Delhi
+<li>Indian Institute of Technology, Kharagpur
+<li>Indian Institute of Technology, Kanpur
+<li>Indian Institute of Technology, Roorkee
+<li>Indian Institute of Technology, Hyderabad
+<li>Indian Institute of Technology, Gandhinagar
+<li>Indian Institute of Technology, Ropar
+<li>Indian Institute of Technology, Patna
+<li>Indian Institute of Technology, Guwahati
+<li>National Institute of Technology, Tiruchirappalli
+<li>Vellore Institute of Technology, Vellore
+<li>Indian Institute of Technology (BHU), Varanasi
+<li>Sardar Vallabhbhai National Institute of Technology Surat
+<li>Indian Institute of Technology Indore
+<li>Birla Institute of Technology, Ranchi
+<li>Visvesvarya National Institute of Technology, Nagpur
+<li>National Institute of Technology, Rourkela
+<li>Indian Institute of Technology, Mandi
+<li>College of Engineering, Pune
+<li>National Institute of Technology, Karnataka
+<li>Motilal Nehru National Institute of Technology, Allahabad
+<li>PSG College of Technology, Coimbatore
+<li>Indian Institute of Technology, Jodhpur
+</ul>
+<p>
+P.S.: we shall publish reviews of these colleges. We also invite readers to submit their experiences about of these colleges.
+</p>
+</div>
+</div>
+<div class="col-11-1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
- <div id="collapse6" class="col-9 contentdiv" style="display:none">
-     <ul>
-    <li>   <b> Infrastructure: </b>This is the most important factor while choosing a college.It includes labs, workshop, computer labs, sufficient classrooms, all the equipments in labs etc.
+</div>
+<div class="a col-11-0" style="padding:2%">
+<br>
+<b class="footerh">Halfpace...Coz the Internet is not always enough!</b>
+<br>
+<br>
 
-    <li>      <b>Placements:</b> This may specify your future after four years of engineering.
-Gather the information about which companies visit the college for placements and statistics of annual placement.
+<div class="footerh col-11-0" >
+					<b><a href="#">&nbsp&nbsp About us &nbsp</a>
+					
+					<a href="#">FAQ &nbsp</a>
+					
+					<a href="mailto:helpdesk@snaafu.com">Contact</a></b>
+<br>
+					<div class="footer-icons col-4">
+                                   	 <p><b>Share us on..</b></p>
+                                    
+                                    
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=www.snaafu.com" style="background:url('Images/wh.jpg')0 100% no-repeat;" target="_blank"><img src="f1.png" title="Share us on facebook" border="1px"/>
+</a>
+   <a href="https://twitter.com/intent/tweet?url=<?=urlencode(www.snaafu.com)?"><img src="t1.png" title="Share us on twitter" border="1px"/></a>
+<script async  charset="utf-8"></script>
+                                    
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=www.snaafu.com&title=trial&summary=&source=" style="background:url('Images/in.png')0 100% no-repeat;"><img src="l1.png" title="Describe Image Link Destination" border="1px"/></a>  
+                                    
+					
+                            
+                                <a href="https://plus.google.com/share?url=www.snaafu.com" style="background:url('Images/gp.png')0 100% no-repeat;"><img src="g1.png" title="Describe Image Link Destination" border="1px"/></a>
+                                    
+                                <a href="whatsapp://send?text=www.snaafu.com" style="background:url('Images/wha.png')0 100% no-repeat;"><img src="q1.png" border="1" title="Describe Image Link Destination"/></a>
+                            
+</div>
+				<!--p class="footer-company-name">Halfpace Pvt. Ltd. &copy; 2016</p-->
+				
 
-    <li><b>Alumni guidance: </b>To know about the college from the person who learnt there helps a lot in understanding the culture of that college.
 
-    <li><b>Faculty:</b> Faculty should be well experienced, sufficiently qualified , concerned about students understanding and updated with recent developements in their field.
+<!--div id="collapse1" class="col-7 ">
 
-    <li><b>Location and facilities:</b> Location of the college should be convenient for you because it directly affects your daily lifestyle. Facilities like hostel, internet, library, mess should be available as per your requirement.
-     </ul>
-        </div>
+</div-->
+</div>
+<!-- adSn -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4184205207267366"
+data-ad-slot="8540143932"
+data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 
-        
-           <p><button id="btn7" href="#collapse7" class="w3-btn w3-round-xxlarge nav-toggle7 col-9-0 w3-indigo contentdiv">Top colleges of Engineering in India</button></p>
-
-    <div id="collapse7" class="col-9 contentdiv" style="display:none" float="right">
-        <ul>
-            <li>Indian Institute of Technology Madras 
-
-<li>Indian Institute of Technology Bombay 
-
-<li>Indian Institute of Technology Delhi 
-
-<li>Indian Institute of Technology Kharagpur 
-
-<li>Indian Institute of Technology Kanpur 
-
-<li>Indian Institute of Technology Roorkee 
-
-<li>Indian Institute of Technology Hyderabad 
-
-<li>Indian Institute of Technology Gandhinagar 
-
-<li>Indian Institute of Technology Ropar 
-
-<li>Indian Institute of Technology Patna 
-
-<li>Indian Institute of Technology Guwahati 
-
-<li>National Institute of Technology Tiruchirappalli 
-
-<li>Vellore Institute of Technology, Vellore 
-
-<li>Indian Institute of Technology (BHU), Varanasi 
-
-<li>Sardar Vallabhbhai National Institute of Technology Surat 
-
-<li>Indian Institute of Technology Indore 
-
-<li>Birla Institute of Technology, Ranchi 
-
-<li>Visvesvarya National Institute of Technology Nagpur 
-
-<li>National Institute of Technology Rourkela
-
-<li>Indian Institute of Technology Mandi 
-
-<li>College of Engineering, Pune	1854 
-
-<li>National Institute of Technology Karnataka
-
-<li>Motilal Nehru National Institute of Technology Allahabad 
-
-<li>PSG College of Technology, Coimbatore 
-
-<li>Indian Institute of Technology Jodhpur 
-        </ul>
- </div>  
-            </div>  
-    </body>
+</body>
 </html>

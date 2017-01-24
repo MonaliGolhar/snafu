@@ -4,191 +4,339 @@ and open the template in the editor.
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-        <link rel="stylesheet" type="text/css" href="Basecss.css">
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="Basecss.css">
+<script>
+$(document).ready(function() {
+$('.nav-toggle').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')=='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Project');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Project');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle1').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')=='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Internship');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Internship');
+}
+});
+});
+});
+</script>
+<style>
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1e1e61;
+}
 
-	<script>
-			$(document).ready(function() {
-		  $('.nav-toggle').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+ul.topnav li {float: left;}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Projects');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Projects');
-			  }
-			});
-		  });
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
-		});
-                
-                
-                $(document).ready(function() {
-		  $('.nav-toggle1').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+ul.topnav li a:hover {background-color: #555;}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Internships');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Internships');
-			  }
-                          
-			});
-		  });
+ul.topnav li.icon {display: none;}
 
-		});
-		</script> 
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style >
 </head>
 <body>
 <div class="header col-11-1 contentdiv w3-blue-grey" >
-    <center> <h1><b>SNNAFU</b></h1>
-        Its everything about engineering....</center>
+<center> <h1><b>SNNAFU</b></h1>
+Its everything about engineering....</center>
 </div>
-
-
 <div class="row">
-
-<div class="col-2-1 ">
-
-    <a href="index.html"> <div class="menu contentdiv w3-purple">What's New</div></a>
-    <a href="PreEngineers.html"><div class="menu contentdiv w3-deep-purple">PreEngineers</div></a>
-    <a href="letsbegin.html"><div class="menu contentdiv w3-indigo">Let's Begin</div></a>
-    <a href="Internship_project.html"> <div class="menu contentdiv w3-blue">Projects and Internships</div></a>
-    <a href="HigherEdu_CompetitiveExams.html"> <div class="menu contentdiv w3-teal">Higher Education and competitive exams</div></a>
-    <a href="Placements.html"> <div class="menu contentdiv w3-green">Placements</div></a>
-</div>
-
-    
-        <div class="col-4-1 contentdiv w3-light-grey">
-     <p><button id="btn1" href="#collapse1" class="w3-btn w3-round-xxlarge nav-toggle col-12 w3-indigo">Project</button></p>
-     </div>
-  
-         <div class="col-4-1 contentdiv w3-light-grey">
-        <p><button id="btn2" href="#collapse2" class="w3-btn w3-round-xxlarge nav-toggle1 col-12 w3-indigo">Internship</button></p>
-                </div> 
-
-  <div id="collapse1" class="col-4-1" style="display:none">
-				
-         <div class="w3-teal col-12 marg">
-             <h3> Why projects are important?</h3>
-             <ul>
-                 <li>Project carries good credits during your assessment.Therefore it makes valuable contribution to your final score. </li>
-                 <li>In college we study theoretical part of a subject. Project is is something where you actually learn.</li>
-                 <li>A good project makes your resume stronger.</li>
-                 <li>You can publish your research paper if your topic invents or concludes something new.</li>
-                 <li>If it is a good application oriented project then you can have your own business model.</li>
-             </ul>
-         </div>
-         
-         <div class="w3-lime col-12 marg">
-             <h3> When to start preparing for the projects?</h3>
-                <ul>
-                    <li> Its not like a piece of cake to choose a project.Think about your project well before the time.
-                    </li>
-                    <li>Discuss with your group members.<br>Listen everyones ideas. Discuss about those ideas. Shortlist 2-3 of them.Study them and select one.</li>
-                    <li>If you are not able to shortlist one, discuss them with your teacher.</li>
-                    <li>Fix a good teacher in your project domain well before time. Take his guidance while choosing the topic. </li>
-                </ul>
-         </div>
-         
-           <div class="w3-teal col-12 marg">
-               <h3>How to choose a project?</h3>
-               <ul>
-                   <li>Choose your domain of interest.</li>
-                   <li>Search for the project mates interested in same domain.</li>
-                   <li>Search or invent an unique idea in that domain.</li>
-                   <li>Highlight the new and creative points in your project to discuss with your guide project mates.</li>
-                   <li>Your project should be either an useful product or it should be demonstration of an algorithm developed by you.
+<div class="col-11-1">
+<ul class="topnav" id="myTopnav">
+  <li><a href="index.html">What's New</a></li>
+  <li><a href="PreEngineers.html">PreEngineers</a>
 </li>
-                   <li>Discuss with your project mates,guide and improve the idea to create a final problem statement.</li>
-               </ul>
-         </div>
-           <div class="w3-lime col-12 marg">
-               <h3>How to choose your project mates?</h3>
-               <ul>
-                   <li>Project group generally contains 3 to 5 people.</li>
-                   <li>After choosing domain start searching for your project mates who wants to do project in the same domain.</li>
-                   <li>Generally 3 types of people can be found in project groups:
-                       <ol><li>Person who is very serious about project. He plans the flow of project and other people follow him. He is the leader 
+  <li><a href="letsbegin.html">Let's Begin</a></li>
+  <li><a href="Internship_project.html"> Projects and Internships</a></li>
+  
+  <li><a href="HigherEdu_CompetitiveExams.html">Higher Education and competitive exams</a></li>
+  <li><a href="Placements.html"> Placements</a>
+</li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#9776</a>
+  </li>
+</ul>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- adSn -->
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4184205207267366"
+     data-ad-slot="8540143932"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="col-11-1">
+<img src="project.jpg" class="imgsize contentdiv"></img>
+</div>
+<div class="col-12 contentdiv">
+<p><button id="btn1" href="#collapse1" class="w3-btn w3-round-xxlarge nav-toggle col-12 w3-indigo">Project</button></p>
+</div>
+<div class="col-11-1">
+<img src="intership.jpg" class="imgsize contentdiv"></img>
+</div>
+<div class="col-12 contentdiv">
+<p><button id="btn2" href="#collapse2" class="w3-btn w3-round-xxlarge nav-toggle1 col-12 w3-indigo">Internship</button></p>
+</div>
+<div id="collapse1" class="col-11-1" style="display:none">
+<div class="w3-light-gray col-12 marg">
+<h3> Why projects are important?</h3>
+<ul>
+<li>Project carries good credits during your assessment.Therefore it makes valuable contribution to your final score. </li>
+<li>In college we study theoretical part of a subject. Project is is something where you actually learn.</li>
+<li>A good project makes your resume stronger.</li>
+<li>You can publish your research paper if your topic invents or concludes something new.</li>
+<li>If it is a good application oriented project then you can have your own business model.</li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3> When to start preparing for the projects?</h3>
+<ul>
+<li> Its not like a piece of cake to choose a project.Think about your project well before the time.
+</li>
+<li>Discuss with your group members.<br>Listen everyones ideas. Discuss about those ideas. Shortlist 2-3 of them.Study them and select one.</li>
+<li>If you are not able to shortlist one, discuss them with your teacher.</li>
+<li>Fix a good teacher in your project domain well before time. Take his guidance while choosing the topic. </li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>How to choose a project?</h3>
+<ul>
+<li>Choose your domain of interest.</li>
+<li>Search for the project mates interested in same domain.</li>
+<li>Search or invent an unique idea in that domain.</li>
+<li>Highlight the new and creative points in your project to discuss with your guide project mates.</li>
+<li>Your project should be either an useful product or it should be demonstration of an algorithm developed by you.
+</li>
+<li>Discuss with your project mates,guide and improve the idea to create a final problem statement.</li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>How to choose your project mates?</h3>
+<ul>
+<li>Project group generally contains 3 to 5 people.</li>
+<li>After choosing domain start searching for your project mates who wants to do project in the same domain.</li>
+<li>Generally 3 types of people can be found in project groups:
+<ol><li>Person who is very serious about project. He plans the flow of project and other people follow him. He is the leader
 of the project.</li>
-                           <li>The person having technical ability to work on the particular task and complete it.Generally such kind of people follows the flowchart of project and completes their assigned task.</li>
-                           <li>This category contains people who are technically not so strong but can do small tasks.<br> But they can do the other non technical procedures and 
+<li>The person having technical ability to work on the particular task and complete it.Generally such kind of people follows the flowchart of project and completes their assigned task.</li>
+<li>This category contains people who are technically not so strong but can do small tasks.<br> But they can do the other non technical procedures and
 can arrange all the required things. They may help in drafting of the project.</li>
-                       </ol>
-                   </li>
-                   <li>Your group configuration should be like:<br>
-                       <br>
-                            One person of Type 1
-                       <br>
-                            Two or three people of type 2
-                       <br>
-                            Zero or one person of type 3
-                   </li>
-                   <li>Never have more than one type 1 people in the group.These people are kind of dominating in nature.This may lead to have clashes in group.</li>
-                   <li>Have at least two type 2 people.You can manage one type 3 person for your non technical needs. Rather than having two A type guys in a group prefer 
+</ol>
+</li>
+<li>Your group configuration should be like:<br>
+<br>
+One person of Type 1
+<br>
+Two or three people of type 2
+<br>
+Zero or one person of type 3
+</li>
+<li>Never have more than one type 1 people in the group.These people are kind of dominating in nature.This may lead to have clashes in group.</li>
+<li>Have at least two type 2 people.You can manage one type 3 person for your non technical needs. Rather than having two A type guys in a group prefer
 having one type 3 person.</li>
-                   <li>In project groups you need to compromise few things.Solve the problems by discussion.Avoid misunderstandings.Maintain the bond between 
+<li>In project groups you need to compromise few things.Solve the problems by discussion.Avoid misunderstandings.Maintain the bond between
 group mates.<br>Be a great team! :)</li>
-               </ul>
-                    
-         </div>
-           <div class="w3-teal col-12 marg">
-               <h3>How to work on a project together?</h3>
-               <ul>
-                   <li>Plan your activities.</li>
-                   <li>Keep record of your plan and actual work.</li>
-                   <li>Practically plans may not work accurately due to some run time problems or modifications. 
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>How to work on a project together?</h3>
+<ul>
+<li>Plan your activities.</li>
+<li>Keep record of your plan and actual work.</li>
+<li>Practically plans may not work accurately due to some run time problems or modifications.
 Modify your plan according to requirements, Track your progress.<br>This will help you to complete project well before time.</li>
-                   <li>Stay connected with your project guide.Let him know what work you are doing.</li>
-                   <li>Present well.Presentation is equally important to understand your project well.</li>
-                   <li>Keep proper documentation of your Project.Don't procrastinate it.Complete it on time.</li>
-               </ul>
-         </div>
-         
-    </div>
-   
-    
-        <div id="collapse2" class="col-4-1" style="display:none">
-              <div class="w3-lime col-12 marg">
-                  Work on your resume. Mention the exact field in which you want to do an internship.
-              </div>
-               <div class="w3-teal col-12 marg">
-                 Search for the job fairs around you.Apply to the companies in your field.  </div>
-             
-             <div class="w3-lime col-12 marg">
-                 Search for the job fairs around you.Apply to the companies in your field.  </div>
-             
-            <div class="w3-teal col-12 marg">
-                 If you are thinking about some particular companies then find out authenticated contact details of the company and communicate through E-mail.
-              </div> 
-             <div class="w3-lime col-12 marg">
-                Reply promptly if they ask for any kind of information.</div>
-               <div class="w3-teal col-12 marg">
-                After interview ask them about their expectations from you and other doubt you want to ask.</div>
-               I know it reallllly needs good editing..! :(
-    </div>
+<li>Stay connected with your project guide.Let him know what work you are doing.</li>
+<li>Present well.Presentation is equally important to understand your project well.</li>
+<li>Keep proper documentation of your Project.Don't procrastinate it.Complete it on time.</li>
+</ul>
+</div>
+</div>
+<div id="collapse2" class="col-11-1" style="display:none">
+<div class="w3-light-gray col-12 marg">
+<h3> Why is an internship required?</h3>
+You will be able to:
+<ul>
+<li>Bridge the gap between theoretical study and the professional world.
+<li>
+Find out exactly what engineers do in order to decide if you want to spend your life as engineer.
+</li>
+<li>
+Get corporate exposure.
+</li>
+<li>
+Get a head start on classroom learning by working with engineering principles on the job.
+</li>
+<li>Gain self-confidence and motivation and develop expertise in interacting with people.</li>
+<li>Develop professional behavior and social skills.</li>
+<li>An internship acts as a great boost in the placement process.</li>
+<li>You may also get a PPO (Pre Placement Offer).</li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>When to do an internship?</h3>
+<ul>
+<li> Most of the peers will advice you to do as many internship's as you can. But's number of internship does not matter, quality of internship does.
+<li>Ideally you should do 2 internship's: one after your 2nd year and one after your 3rd year.</li>
+<li>The one after your 2nd year should be a small and simple one: probably work in your dad's or any relatives company.</li>
+<li>But the one after your 3rd year bust be of at least 1 month in duration and it should be in your core field.</li>
+<li>Don't pursue an internship just for the sake of it. Pursue it to learn new things.</li>
+<li>Also, pursue it in the field which you understand at least a bit.</li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>Which type of internship is good for me?</h3>
+<ul>
+<li>This is again a very subjective decision. But your internship should align with your future career goals.</li>
+<li>For example, if you want to get a job in your core field, then you should find an internship in a core company. Like an electronics engineer should eye for a company in embedded systems or VLSI.</li>
+<li>And if you wish to join IT field later, search for an internship in an IT company (There are very less no. of jobs in core sector, so you can find a lot of mechanical/electrical engineers in IT companies).</li>
+<li>If you are thinking about an MBA after completing your engineering, search for a marketing/finance company. They may offer you a technical job only, but the name of the company helps in the long run.</li>
+<li>And if you wish to start your own company, then find a startup. You'll learn a lot there.</li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>Where to find one?</h3>
+<ul>
+<li>Every college has a placement cell. You should keep in touch with them for internship's.</li>
+<li>Also, every department has an internship cell. Keep in touch with it also.</li>
+<li>Talk with your seniors. Ask where did they complete their internship. Talk to alumni as well.</li>
+<li>Keep an eye on the job and internship fairs as well.</li>
+<li>An internship in a startup is a cherishable experience. Find some local startups and drop them a mail.</li>
+<li>You can also register on internship sites as well, but they hardly provide any good opportunities.</li>
+</ul>
+</div>
+<div class="w3-light-gray col-12 marg">
+<h3>What to do in an internship?</h3>
+<ul>
+<li>Don't take your internship lightly. They can kick you out if you are not working. Also, they may give a bad feedback about you in your college.</li>
+<li>You have received a wonderful opportunity. Use it to learn as many thing's as you can.</li>
+<li>Build a rapport with your team. Talk to other people. Build a good network. It will help you in the long run.</li>
+<li>Also try to solve any small problem which is not a part of your work. You will make an impression on them.</li>
+<li>Work more than you are asked to. Do more than you are supposed to. But share credit with your team.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-11-1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-    
-    
-    
-      </div>
+</div>
+<div class="a col-11-0" style="padding:2%">
+<br>
+<b class="footerh">Halfpace...Coz the Internet is not always enough!</b>
+<br>
+<br>
 
-    </body>
+<div class="footerh col-11-0" >
+					<b><a href="#">&nbsp&nbsp About us &nbsp</a>
+					
+					<a href="#">FAQ &nbsp</a>
+					
+					<a href="mailto:helpdesk@snaafu.com">Contact</a></b>
+<br>
+					<div class="footer-icons col-4">
+                                   	 <p><b>Share us on..</b></p>
+                                    
+                                    
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=www.snaafu.com" style="background:url('Images/wh.jpg')0 100% no-repeat;" target="_blank"><img src="f1.png" title="Share us on facebook" border="1px"/>
+</a>
+   <a href="https://twitter.com/intent/tweet?url=<?=urlencode(www.snaafu.com)?"><img src="t1.png" title="Share us on twitter" border="1px"/></a>
+<script async  charset="utf-8"></script>
+                                    
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=www.snaafu.com&title=trial&summary=&source=" style="background:url('Images/in.png')0 100% no-repeat;"><img src="l1.png" title="Describe Image Link Destination" border="1px"/></a>  
+                                    
+					
+                            
+                                <a href="https://plus.google.com/share?url=www.snaafu.com" style="background:url('Images/gp.png')0 100% no-repeat;"><img src="g1.png" title="Describe Image Link Destination" border="1px"/></a>
+                                    
+                                <a href="whatsapp://send?text=www.snaafu.com" style="background:url('Images/wha.png')0 100% no-repeat;"><img src="q1.png" border="1" title="Describe Image Link Destination"/></a>
+                            
+</div>
+				<!--p class="footer-company-name">Halfpace Pvt. Ltd. &copy; 2016</p-->
+				
+<!-- adSn -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4184205207267366"
+data-ad-slot="8540143932"
+data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
 </html>

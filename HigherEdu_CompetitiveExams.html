@@ -1,142 +1,244 @@
 <html>
-    <head>
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
-        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-        <link rel="stylesheet" type="text/css" href="Basecss.css">
-        <script>
-            $(document).ready(function() {
-		  $('.nav-toggle').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" type="text/css" href="Basecss.css">
+<style>
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1e1e61;
+}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Higher Education options..');
-                                
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Higher Education options..');
-                             
-			  }
-                          
-			});
-		  });
+ul.topnav li {float: left;}
 
-		});
-                
-                
-                $(document).ready(function() {
-		  $('.nav-toggle1').click(function(){
-			//get collapse content selector
-			var collapse_content_selector = $(this).attr('href');
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2; 
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
-			//make the collapse content to be shown or hide
-			var toggle_switch = $(this);
-			$(collapse_content_selector).toggle(function(){
-			  if($(this).css('display')=='none'){
-                                //change the button label to be 'Show'
-				toggle_switch.html('Internships');
-			  }else{
-                                //change the button label to be 'Hide'
-				toggle_switch.html('Internships');
-			  }
-                          
-			});
-		  });
+ul.topnav li a:hover {background-color: #555;}
 
-		});
-                        </script>
-        
-    </head>
-    <body>
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+</style >
+<script>
+$(document).ready(function() {
+$('.nav-toggle').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')=='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Higher Education options..');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Higher Education options..');
+}
+});
+});
+});
+$(document).ready(function() {
+$('.nav-toggle1').click(function(){
+//get collapse content selector
+var collapse_content_selector = $(this).attr('href');
+//make the collapse content to be shown or hide
+var toggle_switch = $(this);
+$(collapse_content_selector).toggle(function(){
+if($(this).css('display')=='none'){
+//change the button label to be 'Show'
+toggle_switch.html('Competitive Exams for government Jobs');
+}else{
+//change the button label to be 'Hide'
+toggle_switch.html('Competitive Exams for government Jobs');
+}
+});
+});
+});
+</script>
+</head>
+<body>
 <div class="header col-11-1 contentdiv w3-blue-grey" >
-    <center> <h1><b>SNNAFU</b></h1>
-        Its everything about engineering....</center>
+<center> <h1><b>SNNAFU</b></h1>
+Its everything about engineering....</center>
 </div>
-
-
 <div class="row">
-
-<div class="col-2-1 ">
-
-    <a href="index.html"> <div class="menu contentdiv w3-purple">What's New</div></a>
-    <a href="PreEngineers.html"><div class="menu contentdiv w3-deep-purple">PreEngineers</div></a>
-    <a href="letsbegin.html"><div class="menu contentdiv w3-indigo">Let's Begin</div></a>
-    <a href="Internship_project.html"> <div class="menu contentdiv w3-blue">Projects and Internships</div></a>
-    <a href="HigherEdu_CompetitiveExams.html"> <div class="menu contentdiv w3-teal">Higher Education and competitive exams</div></a>
-    <a href="Placements.html"> <div class="menu contentdiv w3-green">Placements</div></a>
+<div class="col-11-1">
+<ul class="topnav" id="myTopnav">
+  <li><a href="index.html">What's New</a></li>
+  <li><a href="PreEngineers.html">PreEngineers</a>
+</li>
+  <li><a href="letsbegin.html">Let's Begin</a></li>
+  <li><a href="Internship_project.html"> Projects and Internships</a></li>
+  
+  <li><a href="HigherEdu_CompetitiveExams.html">Higher Education and competitive exams</a></li>
+  <li><a href="Placements.html"> Placements</a>
+</li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">&#9776</a>
+  </li>
+</ul>
+<div class="col-11-1">
+<img src="HIGHER-EDUCATION.jpg" class="imgsize contentdiv"></img>
 </div>
-
-     <div class="col-4 contentdiv w3-light-grey">
-     <p><button id="btn1" href="#collapse1" class="w3-btn w3-round-xxlarge nav-toggle col-12 w3-indigo">Higher Education options..</button></p>
-     </div>
-    
-    <div class="col-4 contentdiv w3-light-grey">
-        <p><button id="btn2" href="#collapse2" class="w3-btn w3-round-xxlarge nav-toggle1 col-12 w3-indigo">Competitive Exams for government Jobs</button></p>
-    </div> 
-    
-    
-         <div id="collapse1" class="col-4-1" style="display:none">
-         
-         <div class="col-11 w3-light-grey">
-             <h3>Technical:</h3>
-             <ul>
-                 <li>IIT – Joint Admission Test for M.Sc (JAM)
-                 <li>Common Entrance Exam for Design (CEED)
-                 <li>Graduate Aptitude Test in Engineering(GATE)
-                 <li>IIIT PG Entrance
-                 <li>BITS Higher Degree Admission Test
-             </ul>
-
-             <h4>For MBA:</h4>
-             <ul>
-                 <li>Common Admission Test (CAT)
-                 <li>Common Management Admission Test (CMAT)
-                 <li>Xavier Aptitude Test (XAT)
-                 <li>The Indian Institute of Foreign Trade (IIFT)
-                 <li>NMAT
-                 <li>Symbiosis National Aptitude (SNAP)
-                 <li>Management Aptitude Test (MAT)
-                 <li>Maharashtra Common Entrance Test (MH-CET)
-                 <li>IBSAT
-                 <li>ATMA(AIMS Test for Management Admissions)
-             </ul>
-             <h4>Post graduation in other countries:</h4>
-             <ul>
-             <li>Graduate Management Admission Test (GMAT)
-             <li>Graduate Record Examinations (GRE)
-                 </ul>
-                    
-         </div>
-     </div>
-    
-    
-    <div id="collapse2" class="col-4-1" style="display:none">     
-        <div class="col-11 w3-light-grey">
-
-           <h4>  For Governmaint jobs:</h4>
-                     <ul>
-                     <li>UPSC
-                     <li>Civil Services Examination (CSE)
-                     <li>Indian Economic Service Examination (IES)
-                     <li>Indian Statistical Service Examination (ISS)
-                     </ul>
-                     <h4>Banking:</h4>
-                     <ul>
-                         <li>SBI PO
-                         <li>IBPS PO
-                         <li>National Bank for Agriculture & Rural Development (NABARD)
-                         <li>RBI Grade A and Grade B Exams
-                         <li>ICICI PO Exams
-                     </ul>
-    </div>
-     </div>
-    
+<div class="col-12 contentdiv ">
+<p><button id="btn1" href="#collapse1" class="w3-btn w3-round-xxlarge nav-toggle col-12 w3-indigo">Higher Education options..</button></p>
 </div>
-    </body>
+<div class="col-11-1">
+<img src="competitive-exam.jpg" class="imgsize contentdiv"></img>
+</div>
+<div class="col-12 contentdiv ">
+<p><button id="btn2" href="#collapse2" class="w3-btn w3-round-xxlarge nav-toggle1 col-12 w3-indigo">Competitive Exams for government Jobs</button></p>
+</div>
+<div id="collapse1" class="col-11-1" style="display:none">
+<div class="col-11 w3-light-grey">
+<h3>Technical:</h3>
+<p>
+Seems like you have enjoyed your 4 years and developed a liking toward's technical spectrum of the job. And now you are considering an option to
+pursue higher education in technical field. Great. Then you may try following exams:
+</p>
+<ul>
+<li>IIT – Joint Admission Test for M.Sc (JAM)
+<li>Common Entrance Exam for Design (CEED)
+<li>Graduate Aptitude Test in Engineering(GATE): opens you doors for an M.Tech.
+<li>IIIT PG Entrance
+<li>BITS Higher Degree Admission Test
+</ul>
+<h4>For MBA:</h4>
+<p>
+Engineering isn't your cup of tea? Or want to start you own business? Great. Consider following exams then:
+</p>
+<ul>
+<li>Common Admission Test (CAT)
+<li>Common Management Admission Test (CMAT)
+<li>Xavier Aptitude Test (XAT)
+<li>The Indian Institute of Foreign Trade (IIFT)
+<li>NMAT
+<li>Symbiosis National Aptitude (SNAP)
+<li>Management Aptitude Test (MAT)
+<li>Maharashtra Common Entrance Test (MH-CET)
+<li>IBSAT
+<li>ATMA(AIMS Test for Management Admissions)
+</ul>
+<h4>Post graduation in other countries:</h4>
+<ul>
+<li>Graduate Management Admission Test (GMAT): for MBA
+<li>Graduate Record Examinations (GRE): for MS
+</ul>
+</div>
+</div>
+<div id="collapse2" class="col-11-1" style="display:none">
+<div class="col-11 w3-light-grey">
+<h4> For Governmaint jobs:</h4>
+<ul>
+<li>GATE: it's score can also be used to get a job in most of the PSUs (Public Sector Units).
+<li>UPSC/MPSC :if you want to get into the system and do something good for the nation.
+<li>Civil Services Examination (CSE)
+<li>Indian Economic Service Examination (IES)
+<li>Indian Statistical Service Examination (ISS)
+</ul>
+<h4>Banking:</h4>
+<p>May be you didn't like engineering. Or because of some reasons, didn't fare well in it. Don't worry. You can still use your skills in the banking sector (and they pay well too).</p>
+<ul>
+<li>SBI PO
+<li>IBPS PO
+<li>National Bank for Agriculture & Rural Development (NABARD)
+<li>RBI Grade A and Grade B Exams
+<li>ICICI PO Exams
+</ul>
+</div>
+</div>
+</div>
+<div class="col-11-1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</div>
+<div class="a col-11-0" style="padding:2%">
+<br>
+<b class="footerh">Halfpace...Coz the Internet is not always enough!</b>
+<br>
+<br>
+
+<div class="footerh col-11-0" >
+					<b><a href="#">&nbsp&nbsp About us &nbsp</a>
+					
+					<a href="#">FAQ &nbsp</a>
+					
+					<a href="mailto:helpdesk@snaafu.com">Contact</a></b>
+<br>
+					<div class="footer-icons col-4">
+                                   	 <p><b>Share us on..</b></p>
+                                    
+                                    
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=www.snaafu.com" style="background:url('Images/wh.jpg')0 100% no-repeat;" target="_blank"><img src="f1.png" title="Share us on facebook" border="1px"/>
+</a>
+   <a href="https://twitter.com/intent/tweet?url=<?=urlencode(www.snaafu.com)?"><img src="t1.png" title="Share us on twitter" border="1px"/></a>
+<script async  charset="utf-8"></script>
+                                    
+                                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=www.snaafu.com&title=trial&summary=&source=" style="background:url('Images/in.png')0 100% no-repeat;"><img src="l1.png" title="Describe Image Link Destination" border="1px"/></a>  
+                                    
+					
+                            
+                                <a href="https://plus.google.com/share?url=www.snaafu.com" style="background:url('Images/gp.png')0 100% no-repeat;"><img src="g1.png" title="Describe Image Link Destination" border="1px"/></a>
+                                    
+                                <a href="whatsapp://send?text=www.snaafu.com" style="background:url('Images/wha.png')0 100% no-repeat;"><img src="q1.png" border="1" title="Describe Image Link Destination"/></a>
+                            
+</div>
+				<!--p class="footer-company-name">Halfpace Pvt. Ltd. &copy; 2016</p-->
+				
+<!-- adSn -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-4184205207267366"
+data-ad-slot="8540143932"
+data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
